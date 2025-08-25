@@ -3,7 +3,7 @@ package objetos;
 public class Pessoa {
 
     private String nome;
-    private String endereco;
+    private String endereco;                                    
     private String telefone;
     private String cpf;
 
@@ -40,5 +40,7 @@ public class Pessoa {
     }
 
 
-
 }
+
+
+

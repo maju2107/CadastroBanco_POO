@@ -27,5 +27,10 @@ public class Conta {
         this.numeroConta = numeroConta;
     }
 
+    public void setSaldo(String saldo){
+        this.saldo = saldo;
+    }
+
 
 }
+
