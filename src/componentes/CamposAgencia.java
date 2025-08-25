@@ -1,7 +1,6 @@
 package componentes;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class CamposAgencia {
 
@@ -23,7 +22,7 @@ public class CamposAgencia {
         jtfAgencia.setBounds(125,10,50,20);
 
         jlConta = new JLabel();
-        jlConta.setText("Número da Conta");
+        jlConta.setText("Número da Conta:");
         jlConta.setBounds(205,10, 105,18);
         
         jtfConta = new JTextField();

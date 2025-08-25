@@ -1,7 +1,6 @@
 package componentes;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class CamposUsuario {
 
@@ -31,7 +30,7 @@ public class CamposUsuario {
         jtfNome.setBounds(75,50,300,20);
 
         jlEndereco = new JLabel();
-        jlEndereco.setText("Endereço");
+        jlEndereco.setText("Endereço:");
         jlEndereco.setBounds(10,75, 60,18);
         
         jtfEndereco = new JTextField();
