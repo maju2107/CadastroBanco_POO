@@ -1,5 +1,11 @@
 package objetos;
+import javax.swing.*;
 
-public class Objetos {
+import telas.Janela;
+
+
+public class Objetos{
+
+
     
 }

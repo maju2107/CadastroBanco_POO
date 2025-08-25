@@ -1,33 +1,14 @@
 package telas;
+import componentes.*;
+
 
 import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.*;
 
 public class Janela extends JFrame{
-
-    private JLabel jlAgencia;
-    private JTextField jtfAgencia;
-    private JLabel jlConta;
-    private JTextField jtfConta;
-    private JSeparator jSeparator01;
-    private JLabel jlNome;
-    private JTextField jtfNome;
-    private JLabel jlEndereco;
-    private JTextField jtfEndereco;
-    private JLabel jlTelefone;
-    private JTextField jtfTelefone;
-    private JLabel jlCpf;
-    private JTextField jtfCpf;
-    private JRadioButton jrbCorrente;
-    private JRadioButton jrbPoupanca;
-    private ButtonGroup bgContas;
-    private JSeparator jSeparator02;
-    private JButton jbConsultar;
-    private JButton jbAtualizar;
-    private JButton jbFechar;
-   
-
+    
     private void centralizar(){
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
         Dimension janela = getSize();
@@ -49,8 +30,37 @@ public class Janela extends JFrame{
 
         centralizar();
 
+        CamposAgencia campo1 = new CamposAgencia();
+        Separadores separador = new Separadores();
+        CamposUsuario campo2 = new CamposUsuario();
+        Botoes botao = new Botoes();
+        
+
+        getContentPane().add(campo1.getLabelAgencia());
+        getContentPane().add(campo1.getCampoAgencia());
+        getContentPane().add(campo1.getLabelConta());
+        getContentPane().add(campo1.getCampoConta());
+
+        getContentPane().add(separador.getSeparador1());
+
+        getContentPane().add(campo2.getLabelNome());
+        getContentPane().add(campo2.getCampoNome());
+        getContentPane().add(campo2.getLabelEndereco());
+        getContentPane().add(campo2.getCampoEndereco());
+        getContentPane().add(campo2.getLabelTelefone());
+        getContentPane().add(campo2.getCampoTelefone());
+        getContentPane().add(campo2.getLabelCpf());
+        getContentPane().add(campo2.getCampoCpf());
+
+        getContentPane().add(botao.getBotaoContaCorrente());
+        getContentPane().add(botao.getBotaoContaPoupanca());
+
+        getContentPane().add(separador.getSeparador2());
+
+        getContentPane().add(botao.getBotaoConsultar());
+        getContentPane().add(botao.getBotaoAtualizar());
+        getContentPane().add(botao.getBotaoFechar());
+
     }
 
-
-    
 }
