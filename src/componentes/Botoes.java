@@ -3,6 +3,7 @@ package componentes;
 import javax.swing.*;
 import java.awt.*;
 
+
 public class Botoes {
 
     // Botões de selecionar tipo de conta
@@ -14,7 +15,8 @@ public class Botoes {
     // Botões de selecionar operações
     private JButton jbConsultar;
     private JButton jbAtualizar;
-    private JButton jbFechar;
+    private JButton jbGravar;
+
     
     public Botoes (){
         jrbCorrente = new JRadioButton("Conta Corrente");
@@ -40,9 +42,11 @@ public class Botoes {
         jbAtualizar.setMnemonic('A');
         jbAtualizar.setEnabled(false);
 
-        jbFechar = new JButton("Fechar");
-        jbFechar.setBounds(245, 190, 100, 23);
-        jbFechar.setMnemonic('F');
+        jbGravar = new JButton("Gravar");
+        jbGravar.setBounds(245, 190, 100, 23);
+        jbGravar.setMnemonic('G');
+
+        
 
     }
 
@@ -62,8 +66,11 @@ public class Botoes {
         return jbAtualizar;
     }
 
-    public JButton getBotaoFechar(){
-        return jbFechar;
+    public JButton getBotaoGravar(){
+        return jbGravar;
     }
+
+    
+    
 
 }

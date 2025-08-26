@@ -5,7 +5,10 @@ import componentes.*;
 import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.*;
+import funções.*;
 
 public class Janela extends JFrame{
     
@@ -59,7 +62,31 @@ public class Janela extends JFrame{
 
         getContentPane().add(botao.getBotaoConsultar());
         getContentPane().add(botao.getBotaoAtualizar());
-        getContentPane().add(botao.getBotaoFechar());
+        getContentPane().add(botao.getBotaoGravar());
+
+        botao.getBotaoGravar().addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+
+                String agencia = campo1.getCampoAgencia().getText().trim();
+                String numeroConta = campo1.getCampoConta().getText().trim();
+
+                String nome = campo2.getCampoNome().getText().trim();
+                String endereco = campo2.getCampoEndereco().getText().trim();
+                String telefone = campo2.getCampoTelefone().getText().trim();
+                String cpf = campo2.getCampoCpf().getText().trim();
+
+                Funcoes funcao = new Funcoes();
+
+                if (agencia.isEmpty()|| numeroConta.isEmpty()|| nome.isEmpty() || endereco.isEmpty() || telefone.isEmpty() || cpf.isEmpty()) {
+                   JOptionPane.showMessageDialog(rootPane, "Todos os campos prescisam estar preenchidos");
+                } else {
+                    funcao.gravar(agencia,numeroConta,nome,endereco,telefone,cpf);
+                    System.out.println("Botão gravar clicado");
+                }
+
+                
+            }
+        });
 
     }
 
